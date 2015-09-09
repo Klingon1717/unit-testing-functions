@@ -9,8 +9,15 @@
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function checkData(inputString) {
-	// your code goes here
-}
+	if(inputString.length === 3){
+		return true;
+	}
+	else{
+		return false;
+
+	}
+
+
 
 /*
  * PROBLEM `concatenateArrays`: (normal)
