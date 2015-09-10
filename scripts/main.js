@@ -27,9 +27,7 @@ function checkData(inputString) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function concatenateArrays(a, b) {
-	// your code goes here
 }
-
 /*
  * PROBLEM `fixProperNoun`: (normal)
  * Proper nouns always begin with a capital letter, followed by small letters.
@@ -332,4 +330,3 @@ module.exports = {
 	isAnagram: 				typeof isAnagram === 'undefined' ? undefined : isAnagram,
 	validateParentheses:	typeof validateParentheses === 'undefined' ? undefined : validateParentheses,
 	flattenArray: 			typeof flattenArray === 'undefined' ? undefined : flattenArray
-};
