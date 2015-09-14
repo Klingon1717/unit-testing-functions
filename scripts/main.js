@@ -1,6 +1,6 @@
 'use strict';
-
-/*
+var _  = require("lodash");
+/* THIS ONE
  * PROBLEM `checkData`: (normal)
  * Write a function that takes a string and checks to make sure that the string
  * has a length of exactly three. Return true if the string length is three or
@@ -9,6 +9,7 @@
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function checkData(inputString) {
+
 	if(inputString.length === 3){
 		return true;
 	}
@@ -16,7 +17,7 @@ function checkData(inputString) {
 		return false;
 
 	}
-
+}
 
 
 /*
@@ -27,8 +28,10 @@ function checkData(inputString) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function concatenateArrays(a, b) {
+	var newArray = a.concat(b);
+	return newArray;
 }
-/*
+/* THIS ONE
  * PROBLEM `fixProperNoun`: (normal)
  * Proper nouns always begin with a capital letter, followed by small letters.
  * Write a function called `fixProperNoun` that takes a potentially improperly
@@ -38,10 +41,11 @@ function concatenateArrays(a, b) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function fixProperNoun(noun) {
-	String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
+	return noun.charAt(0).toUpperCase()+noun.substr(1).toLowerCase();
 
 
+	
+}
 /*
  * PROBLEM `sortLetters`: (normal)
  * Write a function called `sortLetters` that returns a string that sorts all
@@ -50,10 +54,11 @@ function fixProperNoun(noun) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function sortLetters(inputString) {
-	// your code goes here
+		return inputString.split(' ').sort().join(' ');
+	
 }
 
-/*
+/* THIS ONE
  * PROBLEM `absVal`: (normal)
  * Write a function called `absVal` that return the absolute value of a given
  * integer. Don't use Math.abs(...)
@@ -61,17 +66,32 @@ function sortLetters(inputString) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function absVal(integer) {
-	// your code goes here
+	if(integer < 0){
+		return integer *(-1);
+
+	}
+	else{
+		return integer;
+	}
 }
 
-/*
+/* THIS ONE
  * PROBLEM `myMin`: (normal)
  * Write a function called `myMin` that takes two integers and returns the
  * smaller of the two numbers.
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+ function myMin(int1, int2){
 
+	if(int1 < int2){
+		return int1;
+	}
+
+	else{
+		return int2;
+	}
+}
 /*
  * PROBLEM `myMax`: (normal) - Actual Interview Question
  * Write a function called `myMax` that takes an array of integers ans returns
@@ -81,8 +101,18 @@ function absVal(integer) {
  *
  * Insane mode: do this without using a for loop.
  */
+ function myMax(array){
+ 	var theMax = array[0];
+ 	for(var i = 0; i < array.length() i++);
+ 		if (array[i]>-array[i-1]){
+ 			theMax = array[i];
+ 		}
+ 		return theMax;
+ }
 
-/*
+
+
+/* THIS ONE
  * PROBLEM `getMonth`: (normal)
  * Write a function called `getMonth` that maps a given integer to a month.
  *
@@ -94,19 +124,35 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+
 /*
  * PROBLEM `randomElement`: (normal)
  * Create a function called `randomElement` that takes an array of values and
  * returns one randomly selected value from that array.
  */
 
+var randomElement = function(randomInt){
+
+	 return randomInt[getRandomInt(0, randomInt.length)];
+		
+
+		function getRandomInt(min, max) {
+ 		 return Math.floor(Math.random() * (max - min)) + min;
+
+	}
+}
+
 /*
  * PROBLEM `studentPairs`: (normal)
  * Create a javascript function called `studentPairs` that takes an array of
  * student names and returns an array of randomly selected pairs of students
  * (array of arrays).
+
  */
 
+function studentPairs(studentNames){
+	// if(!_. isArray(studentNames))
+}
 /*
  * PROBLEM `sumSquares`: (normal)
  * Write a function called `sumSquares` that returns the sum of squares of all
@@ -123,7 +169,9 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
-/*
+ 
+
+/* THIS ONE
  * PROBLEM `insertDashes`: (normal)
  * Write a function called `insertDashes` that transforms a given sentence into
  * a new one with dashes between each two consecutive letters.
@@ -331,3 +379,4 @@ module.exports = {
 	isAnagram: 				typeof isAnagram === 'undefined' ? undefined : isAnagram,
 	validateParentheses:	typeof validateParentheses === 'undefined' ? undefined : validateParentheses,
 	flattenArray: 			typeof flattenArray === 'undefined' ? undefined : flattenArray
+}
